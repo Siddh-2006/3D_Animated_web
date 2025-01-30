@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: grey;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+.box{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    flex-direction: column;
+}
+.btn1,.btn2,.btn3,.btn4,.btn5,.btn6{
+    font-size: 18px;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid blue;
+    color: blue;
+    border-radius: 10px;
+    box-shadow: -2px 2px 5px rgba(0,0,0,.75);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5 all ease;
+}
+/* for button 1 */
+
+.btn1::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translate(-90%);
+    transition: .5s all ease;
+}
+.btn1:hover::before{
+    transform: translatex(0%);
+}
+.btn1:hover{
+    color:white;
+    background-color: white;
+    border-color:white ;
+}
+
+/* for button 2 */
+
+.btn2::before{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(240, 3, 3);
+    position: absolute;
+    z-index: -1;
+    transform: translate(-90%);
+    transition: .5s all ease;
+}
+.btn2::after{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(240, 3, 3);
+    position: absolute;
+    z-index: -1;
+    transform: translate(90%);
+    transition: .5s all ease;
+}
+.btn2:hover::before{
+    transform: translatex(-50%);
+}
+.btn2:hover::after{
+    transform: translatex(50%);
+}
+.btn2:hover{
+    color:white;
+    background-color: white;
+    border-color:white ;
+}
+
+/* for button 3 */
+.btn3{
+    color: white;
+    border-color:white ;
+}
+.btn3::before{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(3, 3, 240);
+    position: absolute;
+    z-index: -1;
+    transform: translate(-50%);
+    transition: .5s all ease;
+}
+.btn3::after{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(3, 3, 240);
+    position: absolute;
+    z-index: -1;
+    transform: translate(50%);
+    transition: .5s all ease;
+}
+.btn3:hover::after{
+    transform: translatex(100%);
+}
+.btn3:hover::before{
+    transform: translatex(-100%);
+}
+.btn3:hover{
+    color:rgb(3, 3, 240);
+    border-color:rgb(3, 3, 240) ;
+}
+
+/* for button 4 */
+.btn4{
+    color: white;
+    border-color:white ;
+}
+.btn4::before{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(19, 223, 77);
+    position: absolute;
+    z-index: -1;
+    transform: translateY(-50%);
+    transition: .5s all ease;
+}
+.btn4::after{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(19, 223, 77);
+    position: absolute;
+    z-index: -1;
+    transform: translateY(50%);
+    transition: .5s all ease;
+}
+.btn4:hover::after{
+    transform: translateY(100%);
+}
+.btn4:hover::before{
+    transform: translateY(-100%);
+}
+.btn4:hover{
+    color:rgb(3, 3, 240);
+    border-color:rgb(3, 3, 240) ;
+}   
+/* for button 5 */
+.btn5{
+    color: red;
+    border-color:red ;
+}
+.btn5::before{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(223, 19, 39);
+    position: absolute;
+    z-index: -1;
+    transform: translateX(-100%) ;
+    transition: .5s all ease;
+}
+.btn5::after{
+    content: "";
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(223, 19, 39);
+    position: absolute;
+    z-index: -1;
+    transform: translatex(100%);
+    transition: .5s all ease;
+}
+.btn5:hover::after{
+    transform: translatex(0%) rotate(-180deg);
+}
+.btn5:hover::before{
+    transform: translatex(0%) rotate(180deg);
+}
+.btn5:hover{
+    color:white;
+    border-color:white ;
+}   
+
+/* for button 6 */
+.btn6{
+    color: black;
+    border-color:black ;
+}
+.btn6::before{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(223, 19, 39);
+    position: absolute;
+    z-index: -1;
+    transform: translateX(0) translatey(-40%) scale(0);
+    transition: .5s all ease;
+    border-radius: 50%;
+}
+.btn6:hover::before{
+    transform: translatex(-1%) translatey(-40%) scale(100%);
+}
+.btn6:hover{
+    color:white;
+    border-color:white ;
+}   
+
+/* artcle 1 */
+article{
+    width: 200px;
+    height: 250px;
+    border: 2px solid white;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: -2px 2px 5px rgba(0,0,0,.5);
+    overflow: hidden;
+}
+.box article img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s all ease;
+}
+.box article:hover img{
+    transform: scale(1.2);
+}
+.box article:before{
+    content:"HEET";
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translatex(-50%) translateY(-250%);
+    z-index: 1;
+    color: rgb(9, 9, 228);
+    font-size: 24px;
+    font-weight: bold;
+    transition: .5s all ease;
+}
+.box article:hover::before{
+    transform: translatex(-50%) translatey(0%);
+}
+.box article:after{
+    content:"Be a positive energy trampoline-absorb what you need and rebound more back";
+    position: absolute;
+    bottom:0%;
+    left: 0%;
+    transform:translateY(100%);
+    z-index: 1;
+    color: rgb(9, 9, 228);
+    font-size: 14px;
+    font-weight: bold;
+    transition: .5s all ease;
+    background: rgba(255,255,255,0.25);
+    text-align: center;
+    padding: 10px 25px;
+}
+.box article:hover::after{
+    transform: translatey(0%);
+}

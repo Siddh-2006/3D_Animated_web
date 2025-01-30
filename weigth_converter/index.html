@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="display-4 text-center">Weight Converter</h1>
+                <form action="#">
+                    <div class="form-group">
+                        <input type="number" id="lbsInput" class="form-control form-control-lg" placeholder="Enter Pounds...">
+                    </div>
+                </form>
+                <div id="output">
+                    <div class="card card-primary">
+                        <div class="card-body">
+                            <h4>Grams:</h4>
+                            <div id="gramsOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="card card-success">
+                        <div class="card-body">
+                            <h4>Kilograms:</h4>
+                            <div id="kgOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="card card-danger">
+                        <div class="card-body">
+                            <h4>Ounces:</h4>
+                            <div id="ozOutput"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('output').style.display = 'none';
+        document.getElementById('lbsInput').addEventListener('input', function(e) {
+            document.getElementById('output').style.display = 'block';
+            let lbs = e.target.value;
+            document.getElementById('gramsOutput').innerHTML = (lbs / 0.0022046).toFixed(2) + ' grams';
+            document.getElementById('kgOutput').innerHTML = (lbs / 2.2046).toFixed(2) + ' kg';
+            document.getElementById('ozOutput').innerHTML = (lbs * 16).toFixed(2) + ' oz';
+        });
+    </script>
+</body>
+</html>
